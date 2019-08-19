@@ -39,6 +39,11 @@ public class DevSettingsModule extends ReactContextBaseJavaModule {
         return REACT_CLASS;
     }
 
+    @Override    
+    public boolean canOverrideExistingModule() {        
+        return true;    
+    }  
+
     private void handleReloadJS() {
         Activity activity = getCurrentActivity();
         activity.runOnUiThread(new Runnable() {
